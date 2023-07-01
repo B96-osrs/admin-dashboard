@@ -1,0 +1,3 @@
+-admin dashboard project
+-purpose of this project is to practice grid
+-concepts to learn are: positioning of elements, page layout and aligning elements

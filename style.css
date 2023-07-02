@@ -7,12 +7,88 @@
     width: 32px;
 }
 .user-picture {
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+}
+.profile-picture {
     height: 64px;
     width: 64px;
     border-radius: 32px;
 }
-.profile-picture {
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 240px;
 }
+
+.header {
+    grid-column: 2/5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: rgba(255, 0, 0, 0.253);
+}
+.hero {
+    display: flex;
+    grid-column: 2/5;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: rgba(0, 0, 255, 0.253);
+}
+#search-bar {
+    display: flex;
+    flex: 1;
+}
+.sidebar {
+    background-color: rgba(255, 166, 0, 0.363);
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;  
+    padding: 12px;
+}
+.dashboard {
+    margin-left: 16px;
+}
+
+.menu > div,
+.menu-settings > div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: start;
+    margin-left: 16px;
+}
+
+.project-container {
+    background-color: rgba(255, 0, 255, 0.274);
+    padding: 12px;
+    grid-column: 2/4;
+    display: grid;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,320px));
+    gap:12px;
+}
+.card {
+    border-style: solid;
+    padding: 8px;
+}
+
+.announcement-container {
+    background-color: rgba(0, 128, 0, 0.301);
+    padding: 12px;
+    grid-column: 4/5;
+}
+.trending-container {
+    background-color: rgba(71, 142, 235, 0.534);
+    padding: 12px;
+    grid-column: 4/5;
+}
+
+
+

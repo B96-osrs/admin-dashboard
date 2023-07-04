@@ -1,5 +1,12 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+body {
+    margin: 0;
+}
+p {
+    margin: 0;
 }
 
 .icon {
@@ -19,7 +26,8 @@
 
 .container {
     display: grid;
-    grid-template-columns: 200px 1fr 1fr 240px;
+    grid-template-columns: 200px minmax(320px,1fr) 1fr 270px;
+    grid-template-rows: 60px 80px 1fr 1fr;
 }
 
 .header {
@@ -27,9 +35,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    padding: 12px;
-    background-color: rgba(255, 0, 0, 0.253);
+    gap: 24px;
+    padding: 18px;
+    background-color:white;
+}
+.header > .username {
+    font-weight: bold;
+}
+.welcome-message > p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.welcome-message {
+    margin-right: auto;
 }
 .hero {
     display: flex;
@@ -38,56 +57,149 @@
     align-items: center;
     gap: 12px;
     padding: 12px;
-    background-color: rgba(0, 0, 255, 0.253);
+    background-color:white;
 }
 #search-bar {
+    background-color: rgba(192, 186, 186, 0.952);
     display: flex;
     flex: 1;
+    border-radius: 8px;
+    border-style: none;
 }
 .sidebar {
-    background-color: rgba(255, 166, 0, 0.363);
+    background-color:#4EAD89;
     grid-column: 1/2;
+    grid-row: 1/-1;
     display: grid;
-    grid-template-columns: 1fr;  
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 300px 150px;
     padding: 12px;
+    gap:18px;
 }
-.dashboard {
-    margin-left: 16px;
+.menu,
+.menu-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
+
+.dashboard,
 .menu > div,
 .menu-settings > div {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    justify-content: start;
     margin-left: 16px;
+    gap: 12px;
+    align-items: center;
+}
+.dashboard {
+    font-weight: bold;
+    font-size: 20px;
+    align-self: start;
+    margin-left: 8px;
 }
 
 .project-container {
-    background-color: rgba(255, 0, 255, 0.274);
-    padding: 12px;
+    background-color:#9ab0a66e;
+    padding: 24px;
     grid-column: 2/4;
+    grid-row: 3/5;
     display: grid;
+    grid-template-rows: 36px 1fr 36px;
 }
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(280px,320px));
-    gap:12px;
+    gap:24px;
 }
 .card {
-    border-style: solid;
-    padding: 8px;
+    background-color:white;
+    border-radius: 8px;
+    padding: 16px;
+    padding-top: 32px;
+    box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
 }
 
 .announcement-container {
-    background-color: rgba(0, 128, 0, 0.301);
+    background-color:#9ab0a66e;
+    display: grid;
+    grid-template-rows: 36px min-content 36px;
     padding: 12px;
     grid-column: 4/5;
+    grid-row: 3/4;
 }
+.announcement-list {
+    background-color:linear-gradient(45deg,blue,red);
+    border-radius: 8px;
+    box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
+}
+.announcement {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 12px;
+    margin: 12px;
+    border-bottom: 1px solid grey;
+}
+.announcement:nth-child(3){
+    border-bottom: none;
+    margin-bottom: 12px;
+}
+
 .trending-container {
-    background-color: rgba(71, 142, 235, 0.534);
+    display: grid;
+    grid-template-rows: 36px min-content 36px;
+    background-color:#9ab0a66e;
     padding: 12px;
     grid-column: 4/5;
+    grid-row: 4/5;
+}
+.project-container > p,
+.trending-container > p,
+.announcement-container > p {
+    align-self: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
+    
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(2,20px);
+    padding: 12px;
+}
+.user-name {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 15px;
+}
+.user-info {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+button {
+    border-style: none;
+    background-color:#4EAD89;
+    border-radius: 16px;
+    padding: 8px 16px 8px 16px;
+    color: white;
+    font-weight: bold;
 }
 
 

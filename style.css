@@ -3,15 +3,27 @@
     font-family: Roboto, sans-serif;
 }
 body {
+    background:#e5e9e8;
     margin: 0;
 }
 p {
     margin: 0;
 }
-
 .icon {
-    height: 32px;
+    height: auto;
     width: 32px;
+}
+
+.sidebar .icon {
+    filter: brightness(100);
+}
+#bell-icon {
+    filter: brightness(0);
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .user-picture {
     height: 48px;
@@ -37,7 +49,7 @@ p {
     align-items: center;
     gap: 24px;
     padding: 32px;
-    background-color:white;
+    background-color: white;
 }
 .header > .username {
     font-weight: bold;
@@ -52,25 +64,26 @@ p {
     margin-right: auto;
 }
 .hero {
+    background-color: white;
     display: flex;
     grid-column: 2/5;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
     padding: 12px;
-    background-color:white;
-    box-shadow: 1px 1px 1px 0px rgba(128, 128, 128, 0.363);
+    box-shadow: 1px 1px 1px 0px rgba(128, 128, 128, 0.363); 
 }
 #search-bar {
-    background-color:#9ab0a66e;
+    background:#ced1d0;
+    height: 1.5rem;
     display: flex;
     flex: 0.8;
-    border-radius: 8px;
+    border-radius: 1.5rem;
     border-style: none;
     margin-right: auto;
 }
 #search-bar:focus {
-    outline-color:#4EAD89;
+    outline-color:#064e3b;
 }
 .sidebar {
     background:#064e3b;
@@ -81,6 +94,9 @@ p {
     grid-template-rows: 90px 300px 150px;
     padding: 12px;
     gap:18px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 .menu,
 .menu-settings {
@@ -99,15 +115,20 @@ p {
     gap: 12px;
     align-items: center;
 }
+.menu > div:hover,
+.menu-settings > div:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
 .dashboard {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     align-self: start;
     margin-left: 8px;
 }
 
 .project-container {
-    background-color:#9ab0a66e;
     padding: 24px;
     grid-column: 2/4;
     grid-row: 3/5;
@@ -123,26 +144,33 @@ p {
 .card {
     display: grid;
     background-color:white;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 32px 18px 18px 32px;
-    box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
+    box-shadow: 1px 3px 10px 3px rgba(128, 128, 128, 0.363);
+    border-left-style: solid;
+    border-left-width: 18px;
+    border-color:#d4af37;
     gap: 12px;
+    color: rgb(61, 60, 60);
 }
-.card:hover {
-    transform: scale(1.05); 
-    box-shadow: 1px 2px 1px 1px #d4af37;
+.card:hover { 
+    box-shadow: 1px 3px 10px 3px rgba(0, 0, 0, 0.363);
 }
 .card > :first-child {
     font-weight: bolder;
     font-size: 22px;
+    color: black;
 }
 .card > div {
     justify-self: end;
 }
+.card-buttons {
+    display: flex;
+    gap: 12px;
+}
 
 
 .announcement-container {
-    background-color:#9ab0a66e;
     display: grid;
     grid-template-rows: 36px min-content 36px;
     padding: 12px;
@@ -153,7 +181,7 @@ p {
     display: grid;
     background-color:white;
     border-radius: 8px;
-    box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
+    box-shadow: 1px 3px 10px 3px rgba(128, 128, 128, 0.363);
 }
 .announcement {
     display: flex;
@@ -182,7 +210,6 @@ p {
 .trending-container {
     display: grid;
     grid-template-rows: 36px min-content 36px;
-    background-color:#9ab0a66e;
     padding: 12px;
     grid-column: 4/5;
     grid-row: 4/5;
@@ -200,7 +227,7 @@ p {
     grid-template-columns: 1fr;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
+    box-shadow: 1px 3px 10px 3px rgba(128, 128, 128, 0.363);
     padding: 24px 12px 24px 12px;
 }
 
@@ -236,7 +263,10 @@ button {
 button:hover {
     color:#d4af37;
     transform: scale(1.05);
+    cursor: pointer;
 }
+
+
 
 
 

@@ -26,7 +26,7 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: 200px minmax(320px,1fr) 1fr 270px;
+    grid-template-columns: 240px 320px 1fr 260px;
     grid-template-rows: 60px 80px 1fr 1fr;
 }
 
@@ -36,11 +36,12 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-    padding: 18px;
+    padding: 32px;
     background-color:white;
 }
 .header > .username {
     font-weight: bold;
+    font-size: 18px;
 }
 .welcome-message > p:last-child {
     font-size: 20px;
@@ -58,16 +59,21 @@ p {
     gap: 12px;
     padding: 12px;
     background-color:white;
+    box-shadow: 1px 1px 1px 0px rgba(128, 128, 128, 0.363);
 }
 #search-bar {
-    background-color: rgba(192, 186, 186, 0.952);
+    background-color:#9ab0a66e;
     display: flex;
-    flex: 1;
+    flex: 0.8;
     border-radius: 8px;
     border-style: none;
+    margin-right: auto;
+}
+#search-bar:focus {
+    outline-color:#4EAD89;
 }
 .sidebar {
-    background-color:#4EAD89;
+    background:#064e3b;
     grid-column: 1/2;
     grid-row: 1/-1;
     display: grid;
@@ -111,16 +117,29 @@ p {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,320px));
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     gap:24px;
 }
 .card {
+    display: grid;
     background-color:white;
     border-radius: 8px;
-    padding: 16px;
-    padding-top: 32px;
+    padding: 32px 18px 18px 32px;
     box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
+    gap: 12px;
 }
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 1px 2px 1px 1px #d4af37;
+}
+.card > :first-child {
+    font-weight: bolder;
+    font-size: 22px;
+}
+.card > div {
+    justify-self: end;
+}
+
 
 .announcement-container {
     background-color:#9ab0a66e;
@@ -131,7 +150,8 @@ p {
     grid-row: 3/4;
 }
 .announcement-list {
-    background-color:linear-gradient(45deg,blue,red);
+    display: grid;
+    background-color:white;
     border-radius: 8px;
     box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
 }
@@ -139,9 +159,20 @@ p {
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    padding: 12px;
-    margin: 12px;
+    padding: 6px 12px 6px 12px;
+    margin-left: 12px;
+    margin-right:  12px;
     border-bottom: 1px solid grey;
+}
+.announcement > :first-child {
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 6px;
+    padding-top: 12px;
+}
+.announcement > :nth-child(2) {
+    margin-bottom: 12px;
+
 }
 .announcement:nth-child(3){
     border-bottom: none;
@@ -170,7 +201,7 @@ p {
     background-color: white;
     border-radius: 8px;
     box-shadow: 1px 2px 1px 1px rgba(128, 128, 128, 0.363);
-    
+    padding: 24px 12px 24px 12px;
 }
 
 .user {
@@ -195,11 +226,16 @@ p {
 
 button {
     border-style: none;
-    background-color:#4EAD89;
-    border-radius: 16px;
-    padding: 8px 16px 8px 16px;
+    background-color:#064e3b;
+    border-radius: 12px;
+    padding: 12px 24px 12px 24px;
     color: white;
     font-weight: bold;
+    font-size: 14px;
+}
+button:hover {
+    color:#d4af37;
+    transform: scale(1.05);
 }
 
 

@@ -1,3 +1,4 @@
--admin dashboard project
--purpose of this project is to practice grid
--concepts to learn are: positioning of elements, page layout and aligning elements
+- admin dashboard project
+- purpose of this project is to practice grid
+- concepts to learn are: positioning of elements, page layout and aligning elements
+- live: https://b96-osrs.github.io/admin-dashboard/
